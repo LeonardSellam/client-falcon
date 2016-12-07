@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
-import './App.css';
+import {Button, IconButton} from 'react-toolbox/lib/button';
+import ProgressBar from 'react-toolbox/lib/progress_bar';
+
 
 class App extends Component {
 
@@ -14,13 +15,13 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
         <p className="App-intro">
           To get started with this app, edit <code>src/App.js</code> and save to reload.
         </p>
-        <button onClick={this.loadFlask}>Hlo</button>
+        <Button label='Bookmark' raised primary />
+        <ProgressBar type="linear" mode="determinate" value={83} buffer={90} />
       </div>
     );
   }
